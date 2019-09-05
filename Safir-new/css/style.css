@@ -264,7 +264,7 @@ body{
 }
 .slick-prev,
 .slick-next{
-	z-index: ;
+	z-index:1;
 	height: 50px;
 	width: 33px
 }
