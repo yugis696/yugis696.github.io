@@ -2,9 +2,7 @@
 $('.burger').click(function() {
   $('.resp_ul').toggleClass('activated');
   $('.burger').toggleClass('open');
-  $('.top_slider').toggleClass('zi_0');
-  $('.slick-prev').toggleClass('zi_0');
-  $('.slick-next').toggleClass('zi_0');
+  $('.responsive_menu').toggleClass('zi_1');
 });
 
 // Menu js for Position fixed
@@ -31,7 +29,7 @@ $(document).ready(function(){
     slidesToScroll: 1,
     dots: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 6000,
     speed: 1000,
     centerMode: true,    
     adaptiveHeight: true,
@@ -62,7 +60,7 @@ $(document).ready(function(){
     centerMode: true,
   	centerPadding: '40px',
 	slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 3,
 	arrows: true,
 	infinite:true,
     responsive: [

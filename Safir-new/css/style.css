@@ -6,7 +6,8 @@ body{
 }
 /*nav*/
 .yg_nav_top_wrapper{
-	padding: 10px 0;
+	padding: 10px 0;	
+	margin-bottom: 10px;
 }
 .yg_top_logo_block{
 	box-sizing: border-box;
@@ -65,6 +66,7 @@ body{
 	z-index: 1;
 	width: 100%;
 	background-color: #ffffff;
+	box-shadow: 3px 3px 5px #999999a2;
 }
 
 /*yg_header*/
@@ -148,42 +150,40 @@ body{
 /*burger_menu end*/
 
 .yg_offer_wrapper{
-	position: relative;
-	height: 750px;
+	min-height: 100vh;
 	background-color: #ffffff;
 	background: url(../img/bg_heder.svg) no-repeat top;
-	background-size: cover;	
+	background-size: cover;
+}
+.top_slider_wrapper{
+	margin-top: 200px;	
 }
 
-.yg_main_title_box{
-	width: 100%;
+
+.yg_main_title_box{	
+	width: 100%;	
 	color: #ffffff;
+	padding-left: 50px;
+	
 }
-.yg_main_title_box h1{
-	padding-top: 15rem;
+.yg_main_title_box h1{	
     padding-left: 20px;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: bold;
 	font-size: 40px;
 	text-transform: uppercase;
-	line-height: 1.5em
+	line-height: 1.5em;
+	text-shadow: 2px 2px 5px #888888;
 }
-.yg_main_title_box ul{
-	padding-top: 20px;
-}
-.yg_main_title_box ul li{
-	margin-top: 10px
+
 }
 .gm_heder_img{
-	padding-top: 15rem;
-	height: 500px;
 }
 .gm_heder_img img{
-	height: 320px
 }
 .yg_btn{
 	width: 252px;
-	margin: 30px auto 0;
+	margin: 0 auto 0;
 	color: #ffffff;
 	padding: 8px 15px;
 	text-transform: uppercase;
@@ -200,6 +200,9 @@ body{
 	cursor: pointer;
 }
 /*yg_service_wrapper*/
+.yg_service_wrapper{
+	min-height: 100vh;
+}
 .yg_service_title{
 	margin: 60px 0 60px;
 }
@@ -210,16 +213,26 @@ body{
 	text-transform: uppercase;
 }
 .yg_service_item{
-	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
-	min-width: 260px;
-	min-height: 200px;
+	height: 210px;
 	background-color:#ffffff;
-	margin-top: 15px;
+	margin: 30px auto 0;
     position: relative;
+	overflow: hidden;
+	box-shadow: 2px 2px 10px 2px #cbe8f5;
+	
+}
+
+.yg_service_item:hover{
+	cursor: pointer;
 }
 .yg_serv_img{
+	margin: 40px 0 0;
 	height: 70px;
+	-webkit-transition: all .5s;
+	transition: all .5s;
 }
 .yg_serv_img img{
 	display: block;
@@ -229,28 +242,45 @@ body{
 	width: 100%;
 	padding:3px;
 	text-align: center;
+	margin: 25px 0 20px;
 	text-transform: uppercase;
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
 }
 .yg_serv_item_title h3{
 	font-size: 18px;
-	margin-top: 24px
+	margin-top: 24px;
 }
-.yg_serv_list{    
-	display: none;
+.yg_serv_list{
+	background-color: #38ACE1;	
+	font-size: 12px;
+	color: #ffffff;
+	text-transform: uppercase;
+	line-height: 1.5rem;
+	letter-spacing: 0.1rem;
+	right: 0;
+	left: 0;
+	bottom:0;
+	top: 0;
+	padding-top: 10px;
 	width: 100%;
-	font-size: 15px;
-	color: #333;
-    position: absolute;
-    bottom: 0;
-    height: 48%;
-    
+	min-height: 150px;
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
 }
+.yg_service_item:hover .yg_serv_img,.yg_service_item:hover .yg_serv_item_title,.yg_service_item:hover .yg_serv_list {
+	-webkit-transform: translateY(-145px);
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+} 
 .yg_serv_list ul{
+	display: block;
 	position: relative;	
-	list-style: none;	
+	list-style: none;
+	text-align: center;
 }
 .yg_serv_list ul li{
-	margin-left: -10px;	
+	margin-left: -35px;
 }
 /*Team wrapper*/
 .yg_team_wrapper{
@@ -262,12 +292,6 @@ body{
 .slick-next:before{
 	display: none;
 }
-.slick-prev,
-.slick-next{
-	z-index:1;
-	height: 50px;
-	width: 33px
-}
 .slick-prev,.slick-prev:hover,.slick-prev:focus{
     left: 10px;
     background: url(../img/prev.svg)no-repeat center;
@@ -275,6 +299,12 @@ body{
 .slick-next,.slick-next:hover,.slick-next:focus{
     right: 10px;
     background: url(../img/next.svg)no-repeat center;
+}
+.slick-prev,
+.slick-next{
+	z-index:1;
+	height: 50px;
+	width: 33px;
 }
 .yg_team_title{
 	margin: 30px 0 50px;
@@ -311,13 +341,18 @@ body{
 	}
 	.yg_main_title_box h1{
 		font-size: 30px;
-		padding-top: 10rem;
+		padding-left: 50px;
 	}
-	.yg_main_title_box ul{
-		padding-top: 5px;
+	.yg_heder_wrapper{
+		height: 700px;
 	}
+	.top_slider{
+		margin-top: 0;
+	}
+	.yg_main_title_box{
+		padding: 0;
+	}	
 	.gm_heder_img{
-		padding-top: 10rem;
 	}
 	.gm_heder_img img{
 		height: 250px;
@@ -332,17 +367,18 @@ body{
 	.yg_top_phone_block{
 		margin: -90px 0 0 20px;
 	}
+	
 	.yg_main_title_box h1{
-		font-size: 40px;
+		font-size: 30px;
+		text-align: center;
+		padding-left: 0;
 	}
-	.yg_main_title_box ul{
-		padding-top: 5px;
-	}
+	
 	.gm_heder_img{
 		display: none;
 	}
 	.yg_offer_wrapper{
-		height: 600px;
+		
 	}
 	.yg_btn{
 		margin: 10px auto;
@@ -352,6 +388,7 @@ body{
 @media (max-width: 767px){
 	.yg_nav_top_wrapper{
 		position: relative;
+		box-shadow: none;
 	}
 	.yg_top_phone_block{
 		position: absolute;
@@ -363,10 +400,9 @@ body{
 		top: 85px;
 		right: 0;
 		width: 100%;
-		z-index: 1;				
+		z-index: 0;				
 	}
 	.resp_ul{
-		z-index: 1;
 		background-color: #38ace1;
 		-webkit-transform: translatex(-100%);
 		transform: translatex(-100%);
@@ -428,7 +464,7 @@ body{
 		margin: 30px auto;
 	}
 	.yg_offer_wrapper{
-		height: 700px;
+		
 	}
 	.top_slider{
 		z-index: 1		
@@ -440,24 +476,27 @@ body{
 	.zi_0{
 		z-index: 0;
 	}
-    
+	.zi_1{
+		z-index: 99;
+	}
 
 @media (max-width: 575px){
 	.yg_top_phone_block{
 		display: none;
 	}
 	.yg_offer_wrapper{
-		height: 600px;
+		
+	}
+	.top_slider_wrapper{
+		margin-top: 150px;
 	}
 	.yg_main_title_box h1{
-		padding: 100px 50px 0;
+		padding: 80px 0 0;
 		font-size: 25px;		
 	}
-	.yg_main_title_box ul{
-		padding: 0 70px 0;
-	}
+	
 	.yg_btn{
-		margin: 30px auto;
+		margin: 0px auto;
 	}
 	.yg_service_title h2{
 		font-size: 30px;
@@ -466,6 +505,6 @@ body{
 
 @media (max-width: 400px){
 	.yg_offer_wrapper{
-		height: 900px;
+		
 	}
 }
